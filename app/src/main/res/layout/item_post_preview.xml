@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userphoto"
+            android:layout_width="69dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="10dp"
+            android:padding="8dp"
+            android:src="@drawable/post_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:strokeColor="#00BCD4"
+            app:strokeWidth="5dp" />
+
+        <ImageView
+            android:id="@+id/PostImage"
+            android:layout_width="160dp"
+            android:layout_height="145dp"
+            android:layout_below="@+id/userphoto"
+            android:layout_marginStart="9dp"
+            android:scaleType="centerCrop" />
+
+
+        <TextView
+            android:id="@+id/fullName"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/userphoto"
+            android:text="fullName" />
+
+
+        <TextView
+            android:id="@+id/publishDate"
+            android:layout_width="124dp"
+            android:layout_height="17dp"
+            android:layout_below="@+id/fullName"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@+id/userphoto"
+            android:text="publishDate" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publishDate"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@+id/PostImage"
+            android:text="description"
+            android:textSize="15sp"/>
+
+
+        <LinearLayout
+            android:id="@+id/lineTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_toEndOf="@+id/PostImage"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                tools:text="tag 1"
+                android:paddingRight="15dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="3dp"
+                android:background="@color/yellow"
+                android:layout_marginEnd="15dp"
+                android:textSize="15dp" />
+            <TextView
+                android:id="@+id/tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                tools:text="tag 2"
+                android:paddingRight="15dp"
+                android:paddingLeft="3dp"
+                android:background="@color/yellow"
+                android:paddingBottom="4dp"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tag3"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/lineTag"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/PostImage"
+            android:background="@color/yellow"
+            android:paddingRight="15dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="3dp"
+            android:textSize="15dp"
+            tools:text="tag 3" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/publishDate"
+            android:layout_marginEnd="-167dp"
+            android:background="@drawable/ic_done"
+            android:visibility="gone"
+            android:text="Button" />
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
